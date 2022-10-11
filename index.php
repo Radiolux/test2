@@ -20,11 +20,11 @@
 
             if (item.style.display === 'block') {
                 item.style.display = 'none';
-                event.target.innerHTML = "&#9205";
+                event.target.innerHTML = "&#11208";
             }
             else {
                 item.style.display = 'block';
-                event.target.innerHTML = "&#9207";
+                event.target.innerHTML = "&#11206";
             }
         }
     </script>
@@ -65,7 +65,7 @@ class TreeCategories
         {
             if (isset($item['children']))
             {
-                $html .= '<li><span onclick="ShowCategories('.$item['categories_id'].')">&#9205;</span>'.$item['categories_id'].' = {array}['.count($item['children']).']';
+                $html .= '<li><span onclick="ShowCategories('.$item['categories_id'].')">&#11208;</span>'.$item['categories_id'].' = {array}['.count($item['children']).']';
                 $html .= $this->buildMenu($item['children']);
                 $html .= '</li>';
             }
@@ -81,7 +81,7 @@ class TreeCategories
 
 //$start = microtime(true); //onclick="ShowCategories('.$element['parent_id'].')"
 $arr = new TreeCategories();
-echo '<ul><li><span onclick="ShowCategories(0)"> &#9205; </span>$return = {array}['.count($arr->getArray()).']';
+echo '<ul><li><span onclick="ShowCategories(0)"> &#11208; </span>$return = {array}['.count($arr->getArray()).']';
 echo $arr->buildMenu($arr->getArray());
 echo '</li></ul>';
 //$start = microtime(true) - $start;
